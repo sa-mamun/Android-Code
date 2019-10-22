@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Demo Recycler Test</string>
+
+    <string-array name="category">
+        <item>Select...</item>
+        <item>Food</item>
+        <item>Fashion</item>
+    </string-array>
+
+</resources>

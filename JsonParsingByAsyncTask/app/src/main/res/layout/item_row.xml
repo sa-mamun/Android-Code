@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:padding="5dp"
+        />
+
+    <LinearLayout
+        android:layout_below="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/rom"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/screenSize"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/backCamera"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/companyName"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/frontCamera"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/battery"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/operatingSystem"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/processor"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/ram"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

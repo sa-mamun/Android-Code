@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    >
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Name"
+        android:gravity="center_vertical"
+        android:background="#758AFA"
+        android:textColor="#FFFFFF"
+        />
+
+    <TextView
+        android:id="@+id/ageTv"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Age"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/nameTv"
+        />
+
+    <TextView
+        android:id="@+id/addressTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/ageTv"
+        />
+
+</RelativeLayout>

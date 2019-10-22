@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="3dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter Name"
+        />
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/etName"
+        android:hint="Enter Age"
+        />
+
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/etAge"
+        android:hint="Enter Address"
+        />
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Add Student"
+        android:layout_below="@+id/etAddress"
+        />
+    <Button
+        android:id="@+id/showBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Show Student"
+        android:layout_below="@+id/addBtn"
+        />
+
+</RelativeLayout>

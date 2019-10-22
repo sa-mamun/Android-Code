@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Spinner</string>
+
+    <string-array name="cities">
+
+        <item>Dhaka</item>
+        <item>Rajshahi</item>
+        <item>Chittagang</item>
+        <item>Khulna</item>
+        <item>Barisal</item>
+        <item>Sylhet</item>
+        <item>Mymensingh</item>
+
+    </string-array>
+
+
+</resources>
