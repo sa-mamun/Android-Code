@@ -3,86 +3,118 @@ package demo.com.jsondataparsebyretrofit;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class DailyForecast {
 
-    @SerializedName("city")
+    @SerializedName("coord")
     @Expose
-    private City city;
-    @SerializedName("cod")
+    private Coord coord;
+    @SerializedName("weather")
     @Expose
-    private String cod;
-    @SerializedName("message")
+    private List<Weather> weather = null;
+    @SerializedName("base")
     @Expose
-    private Double message;
-    @SerializedName("cnt")
+    private String base;
+    @SerializedName("main")
     @Expose
-    private Integer cnt;
-    @SerializedName("list")
+    private Main main;
+    @SerializedName("wind")
     @Expose
-    private java.util.List<Day> list = null;
-
-    public City getCity() {
-        return city;
-    }
-
-    public void setCity(City city) {
-        this.city = city;
-    }
-
-    public String getCod() {
-        return cod;
-    }
-
-    public void setCod(String cod) {
-        this.cod = cod;
-    }
-
-    public Double getMessage() {
-        return message;
-    }
-
-    public void setMessage(Double message) {
-        this.message = message;
-    }
-
-    public Integer getCnt() {
-        return cnt;
-    }
-
-    public void setCnt(Integer cnt) {
-        this.cnt = cnt;
-    }
-
-    public java.util.List<Day> getList() {
-        return list;
-    }
-
-    public void setList(java.util.List<Day> list) {
-        this.list = list;
-    }
-
-}
-
-class City {
-
+    private Wind wind;
+    @SerializedName("clouds")
+    @Expose
+    private Clouds clouds;
+    @SerializedName("dt")
+    @Expose
+    private Integer dt;
+    @SerializedName("sys")
+    @Expose
+    private Sys sys;
+    @SerializedName("timezone")
+    @Expose
+    private Integer timezone;
     @SerializedName("id")
     @Expose
     private Integer id;
     @SerializedName("name")
     @Expose
     private String name;
-    @SerializedName("coord")
+    @SerializedName("cod")
     @Expose
-    private Coord coord;
-    @SerializedName("country")
-    @Expose
-    private String country;
-    @SerializedName("population")
-    @Expose
-    private Integer population;
-    @SerializedName("timezone")
-    @Expose
-    private Integer timezone;
+    private Integer cod;
+
+    public Coord getCoord() {
+        return coord;
+    }
+
+    public void setCoord(Coord coord) {
+        this.coord = coord;
+    }
+
+    public List<Weather> getWeather() {
+        return weather;
+    }
+
+    public void setWeather(List<Weather> weather) {
+        this.weather = weather;
+    }
+
+    public String getBase() {
+        return base;
+    }
+
+    public void setBase(String base) {
+        this.base = base;
+    }
+
+    public Main getMain() {
+        return main;
+    }
+
+    public void setMain(Main main) {
+        this.main = main;
+    }
+
+    public Wind getWind() {
+        return wind;
+    }
+
+    public void setWind(Wind wind) {
+        this.wind = wind;
+    }
+
+    public Clouds getClouds() {
+        return clouds;
+    }
+
+    public void setClouds(Clouds clouds) {
+        this.clouds = clouds;
+    }
+
+    public Integer getDt() {
+        return dt;
+    }
+
+    public void setDt(Integer dt) {
+        this.dt = dt;
+    }
+
+    public Sys getSys() {
+        return sys;
+    }
+
+    public void setSys(Sys sys) {
+        this.sys = sys;
+    }
+
+    public Integer getTimezone() {
+        return timezone;
+    }
+
+    public void setTimezone(Integer timezone) {
+        this.timezone = timezone;
+    }
 
     public Integer getId() {
         return id;
@@ -100,36 +132,28 @@ class City {
         this.name = name;
     }
 
-    public Coord getCoord() {
-        return coord;
+    public Integer getCod() {
+        return cod;
     }
 
-    public void setCoord(Coord coord) {
-        this.coord = coord;
+    public void setCod(Integer cod) {
+        this.cod = cod;
     }
 
-    public String getCountry() {
-        return country;
+}
+
+class Clouds {
+
+    @SerializedName("all")
+    @Expose
+    private Integer all;
+
+    public Integer getAll() {
+        return all;
     }
 
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    public Integer getPopulation() {
-        return population;
-    }
-
-    public void setPopulation(Integer population) {
-        this.population = population;
-    }
-
-    public Integer getTimezone() {
-        return timezone;
-    }
-
-    public void setTimezone(Integer timezone) {
-        this.timezone = timezone;
+    public void setAll(Integer all) {
+        this.all = all;
     }
 
 }
@@ -160,71 +184,35 @@ class Coord {
 
 }
 
-class Day {
+class Main {
 
-    @SerializedName("dt")
-    @Expose
-    private Integer dt;
-    @SerializedName("sunrise")
-    @Expose
-    private Integer sunrise;
-    @SerializedName("sunset")
-    @Expose
-    private Integer sunset;
     @SerializedName("temp")
     @Expose
-    private Temp temp;
+    private Double temp;
     @SerializedName("pressure")
     @Expose
     private Integer pressure;
     @SerializedName("humidity")
     @Expose
     private Integer humidity;
-    @SerializedName("weather")
+    @SerializedName("temp_min")
     @Expose
-    private java.util.List<Weather> weather = null;
-    @SerializedName("speed")
+    private Double tempMin;
+    @SerializedName("temp_max")
     @Expose
-    private Double speed;
-    @SerializedName("deg")
+    private Double tempMax;
+    @SerializedName("sea_level")
     @Expose
-    private Integer deg;
-    @SerializedName("clouds")
+    private Integer seaLevel;
+    @SerializedName("grnd_level")
     @Expose
-    private Integer clouds;
-    @SerializedName("rain")
-    @Expose
-    private Double rain;
+    private Integer grndLevel;
 
-    public Integer getDt() {
-        return dt;
-    }
-
-    public void setDt(Integer dt) {
-        this.dt = dt;
-    }
-
-    public Integer getSunrise() {
-        return sunrise;
-    }
-
-    public void setSunrise(Integer sunrise) {
-        this.sunrise = sunrise;
-    }
-
-    public Integer getSunset() {
-        return sunset;
-    }
-
-    public void setSunset(Integer sunset) {
-        this.sunset = sunset;
-    }
-
-    public Temp getTemp() {
+    public Double getTemp() {
         return temp;
     }
 
-    public void setTemp(Temp temp) {
+    public void setTemp(Double temp) {
         this.temp = temp;
     }
 
@@ -244,114 +232,73 @@ class Day {
         this.humidity = humidity;
     }
 
-    public java.util.List<Weather> getWeather() {
-        return weather;
+    public Double getTempMin() {
+        return tempMin;
     }
 
-    public void setWeather(java.util.List<Weather> weather) {
-        this.weather = weather;
+    public void setTempMin(Double tempMin) {
+        this.tempMin = tempMin;
     }
 
-    public Double getSpeed() {
-        return speed;
+    public Double getTempMax() {
+        return tempMax;
     }
 
-    public void setSpeed(Double speed) {
-        this.speed = speed;
+    public void setTempMax(Double tempMax) {
+        this.tempMax = tempMax;
     }
 
-    public Integer getDeg() {
-        return deg;
+    public Integer getSeaLevel() {
+        return seaLevel;
     }
 
-    public void setDeg(Integer deg) {
-        this.deg = deg;
+    public void setSeaLevel(Integer seaLevel) {
+        this.seaLevel = seaLevel;
     }
 
-    public Integer getClouds() {
-        return clouds;
+    public Integer getGrndLevel() {
+        return grndLevel;
     }
 
-    public void setClouds(Integer clouds) {
-        this.clouds = clouds;
-    }
-
-    public Double getRain() {
-        return rain;
-    }
-
-    public void setRain(Double rain) {
-        this.rain = rain;
+    public void setGrndLevel(Integer grndLevel) {
+        this.grndLevel = grndLevel;
     }
 
 }
-class Temp {
+class Sys {
 
-    @SerializedName("day")
+    @SerializedName("country")
     @Expose
-    private Double day;
-    @SerializedName("min")
+    private String country;
+    @SerializedName("sunrise")
     @Expose
-    private Double min;
-    @SerializedName("max")
+    private Integer sunrise;
+    @SerializedName("sunset")
     @Expose
-    private Double max;
-    @SerializedName("night")
-    @Expose
-    private Double night;
-    @SerializedName("eve")
-    @Expose
-    private Double eve;
-    @SerializedName("morn")
-    @Expose
-    private Double morn;
+    private Integer sunset;
 
-    public Double getDay() {
-        return day;
+    public String getCountry() {
+        return country;
     }
 
-    public void setDay(Double day) {
-        this.day = day;
+    public void setCountry(String country) {
+        this.country = country;
     }
 
-    public Double getMin() {
-        return min;
+    public Integer getSunrise() {
+        return sunrise;
     }
 
-    public void setMin(Double min) {
-        this.min = min;
+    public void setSunrise(Integer sunrise) {
+        this.sunrise = sunrise;
     }
 
-    public Double getMax() {
-        return max;
+    public Integer getSunset() {
+        return sunset;
     }
 
-    public void setMax(Double max) {
-        this.max = max;
-    }
-
-    public Double getNight() {
-        return night;
-    }
-
-    public void setNight(Double night) {
-        this.night = night;
-    }
-
-    public Double getEve() {
-        return eve;
-    }
-
-    public void setEve(Double eve) {
-        this.eve = eve;
-    }
-
-    public Double getMorn() {
-        return morn;
-    }
-
-    public void setMorn(Double morn) {
-        this.morn = morn;
+    public void setSunset(Integer sunset) {
+        this.sunset = sunset;
     }
 
 }
@@ -400,6 +347,32 @@ class Weather {
 
     public void setIcon(String icon) {
         this.icon = icon;
+    }
+
+}
+ class Wind {
+
+    @SerializedName("speed")
+    @Expose
+    private Double speed;
+    @SerializedName("deg")
+    @Expose
+    private Integer deg;
+
+    public Double getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(Double speed) {
+        this.speed = speed;
+    }
+
+    public Integer getDeg() {
+        return deg;
+    }
+
+    public void setDeg(Integer deg) {
+        this.deg = deg;
     }
 
 }
