@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/ll1"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="220dp"
         android:orientation="vertical"
         android:gravity="center"
         android:background="#FFFFFF"
@@ -17,8 +17,8 @@
 
         <ImageView
             android:id="@+id/profilePic"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             />
 
     </LinearLayout>
@@ -70,6 +70,14 @@
             android:text="Update"
             android:layout_marginTop="30dp"
             android:onClick="Update"
+            />
+        <Button
+            android:id="@+id/database"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Database"
+            android:layout_marginTop="30dp"
+            android:onClick="database"
             />
 
     </LinearLayout>
