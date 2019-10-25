@@ -99,4 +99,26 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    public void forgetPassword(View view) {
+
+        userEmail = email.getText().toString();
+
+        mAuth.sendPasswordResetEmail(userEmail)
+                .addOnCompleteListener(MainActivity.this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful())
+                        {
+                            Toast.makeText(MainActivity.this, "New Password Sent to Email, Please check", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }).addOnFailureListener(MainActivity.this, new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(MainActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
 }

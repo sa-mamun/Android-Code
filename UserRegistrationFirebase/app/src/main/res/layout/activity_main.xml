@@ -36,5 +36,13 @@
         android:layout_below="@+id/signin"
         android:onClick="SignUp"
         />
+    <Button
+        android:id="@+id/forgetPass"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Forget Password"
+        android:layout_below="@+id/signup"
+        android:onClick="forgetPassword"
+        />
 
 </RelativeLayout>

@@ -23,6 +23,7 @@ public class UserProfile extends AppCompatActivity {
 
     EditText userName, userEmail, userVerify;
     ImageView profilePic;
+    Button verifyBtn;
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
     boolean verified;
@@ -37,6 +38,7 @@ public class UserProfile extends AppCompatActivity {
         userEmail = findViewById(R.id.userEmail);
         userVerify = findViewById(R.id.userVerify);
         profilePic = findViewById(R.id.profilePic);
+        verifyBtn = findViewById(R.id.verifyBtn);
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
@@ -61,6 +63,7 @@ public class UserProfile extends AppCompatActivity {
         else {
             verifyMsg = "Email is not verified";
             userVerify.setText(verifyMsg);
+            verifyBtn.setVisibility(View.VISIBLE);
         }
 
         Uri photoUrl = mUser.getPhotoUrl();
@@ -97,6 +100,28 @@ public class UserProfile extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    public void Verify(View view) {
+
+        mUser.sendEmailVerification()
+                .addOnCompleteListener(UserProfile.this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+
+                        if (task.isSuccessful())
+                        {
+                            Toast.makeText(UserProfile.this, "Email Verification Sent, Please Check your Email", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                }).addOnFailureListener(UserProfile.this, new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(UserProfile.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 }
