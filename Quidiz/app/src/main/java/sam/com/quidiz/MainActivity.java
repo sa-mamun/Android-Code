@@ -29,5 +29,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        bookmark.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent bookmarkIntent = new Intent(MainActivity.this, BookmarksActivity.class);
+                startActivity(bookmarkIntent);
+
+            }
+        });
+
     }
 }
