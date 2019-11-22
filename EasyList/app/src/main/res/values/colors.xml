@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#C41A52A5</color>
+    <color name="colorPrimaryDark">#1A52A5</color>
+    <color name="colorAccent">#1A52A5</color>
+
+    <color name="noteColor">#B3A2FC</color>
+    <color name="taskColor">#7DD3FF</color>
+    <color name="reminderColor">#FFEA82</color>
+    <color name="birthdayColor">#FF88A4</color>
+    <color name="darkWhite">#FBFBFB</color>
+    <color name="textColorLightBlack">#888888</color>
+    <color name="textColorDarkBlack">#5E5E5E</color>
+    <color name="textColorBlack">#CC000000</color>
+
+</resources>
