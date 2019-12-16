@@ -1,9 +1,12 @@
 package demo.com.easylist;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.graphics.pdf.PdfDocument;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -29,11 +32,11 @@ public class TaskHomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_task_home);
 
         tabLayout = findViewById(R.id.tabLayout);
-        civ_taskHomeProfile = findViewById(R.id.civ_taskHomeProfile);
         viewPager = findViewById(R.id.viewPager);
         fab_add = findViewById(R.id.fab_add);
 
-        pagerAdapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+        pagerAdapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount(), this);
+        pagerAdapter.notifyDataSetChanged();
         viewPager.setAdapter(pagerAdapter);
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -54,6 +57,7 @@ public class TaskHomeActivity extends AppCompatActivity {
         });
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
 
         //Click to add Task
         fab_add.setOnClickListener(new View.OnClickListener() {

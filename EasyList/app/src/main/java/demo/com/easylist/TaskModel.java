@@ -6,6 +6,7 @@ public class TaskModel {
     String taskName;
     String taskType;
     String taskTime;
+    boolean selected;
 
     public TaskModel(String taskName, String taskType, String taskTime) {
         this.taskName = taskName;
@@ -18,6 +19,22 @@ public class TaskModel {
         this.taskName = taskName;
         this.taskType = tastType;
         this.taskTime = taskTime;
+    }
+
+    public TaskModel(int taskId, String taskName, String taskType, String taskTime, boolean selected) {
+        this.taskId = taskId;
+        this.taskName = taskName;
+        this.taskType = taskType;
+        this.taskTime = taskTime;
+        this.selected = selected;
+    }
+
+    public boolean getSelected() {
+        return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected = selected;
     }
 
     public String getTaskTime() {

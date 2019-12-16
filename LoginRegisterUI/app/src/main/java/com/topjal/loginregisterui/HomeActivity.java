@@ -23,7 +23,7 @@ public class HomeActivity extends AppCompatActivity {
         categoryCV = findViewById(R.id.categoryCV);
         questionCV = findViewById(R.id.questionCV);
         customizeCV = findViewById(R.id.customizeCV);
-        profileCV = findViewById(R.id.profileCV);
+//        profileCV = findViewById(R.id.profileCV);
 
         setSupportActionBar(homeToolbar);
         getSupportActionBar().setTitle("Admin Home");

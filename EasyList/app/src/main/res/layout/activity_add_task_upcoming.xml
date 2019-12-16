@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTaskUpcoming">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/add_task_up_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        />
+    <TextView
+        android:id="@+id/add_task_up_textType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Work"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/add_task_up_toolbar"
+        />
+    <TextView
+        android:id="@+id/add_task_up_noOfTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4 tasks"
+        android:textSize="15sp"
+        android:textColor="@color/textColorLightBlack"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/add_task_up_textType"
+        />
+    <LinearLayout
+        android:id="@+id/add_task_up_ll_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_below="@+id/add_task_up_noOfTask"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="65dp">
+
+        <TextView
+            android:id="@+id/add_task_up_taskTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upcoming"
+            android:textSize="13sp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/add_task_up_view_one"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/add_task_up_ll_one"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="65dp"
+        android:background="#331A52A5" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_task_up_ib_addTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="14dp"
+        android:src="@drawable/add_event"
+        app:fabSize="mini" />
+
+    <LinearLayout
+        android:id="@+id/add_task_up_ll_rcv"
+        android:layout_below="@+id/add_task_up_view_one"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/add_task_up_ll_delete"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/add_task_up_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutAnimation="@anim/layout_animation"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:scrollbars="vertical">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/add_task_up_ll_delete"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center"
+        android:background="@drawable/delete_button_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableStart="@drawable/ic_delete_black_24dp"
+            android:text="DELETE"
+            android:textSize="17sp"
+            android:textColor="#B3FF0000"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:drawablePadding="10dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

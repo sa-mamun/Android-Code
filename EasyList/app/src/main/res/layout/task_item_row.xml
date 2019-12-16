@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     >
 
     <RelativeLayout
         android:id="@+id/rl"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginLeft="5dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="2dp"
         >
@@ -18,8 +18,7 @@
             android:id="@+id/checkbox_check"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Meeting at 2 pm"
-            android:textSize="16sp"/>
+            android:text="Meeting at 2 pm" />
 
         <ImageButton
             android:id="@+id/ib_closeBtn"

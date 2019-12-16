@@ -156,7 +156,8 @@ public class AddTaskTypeActivity extends AppCompatActivity implements View.OnCli
                 tv_timeUpcoming.setTextColor(16);
                 tv_timeUpcoming.setTextColor(Color.parseColor("#1A52A5"));
 
-                dateFormatMethod();
+//                dateFormatMethod();
+                tv_selectTime.setText(tv_timeUpcoming.getText().toString());
                 break;
 
             case R.id.ll_addBtn:
@@ -167,7 +168,15 @@ public class AddTaskTypeActivity extends AppCompatActivity implements View.OnCli
                 }else if (TextUtils.isEmpty(tv_selectTime.getText().toString()))
                 {
                     tv_selectTime.setError("Required");
-                }else{
+                }
+                else if (tv_selectTime.getText().toString().equals("Upcoming"))
+                {
+                    Intent intent = new Intent(AddTaskTypeActivity.this, AddTaskUpcoming.class);
+                    intent.putExtra("type", et_selectType.getText().toString());
+                    intent.putExtra("time", tv_selectTime.getText().toString());
+                    startActivity(intent);
+                }
+                else{
                     Intent intent = new Intent(AddTaskTypeActivity.this, AddTaskActivity.class);
                     intent.putExtra("type", et_selectType.getText().toString());
                     intent.putExtra("time", tv_selectTime.getText().toString());

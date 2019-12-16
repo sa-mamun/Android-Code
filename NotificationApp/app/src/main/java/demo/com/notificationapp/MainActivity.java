@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.e("AlarmStartTime", String.valueOf(alarmStartTime));
 
                 //Set Time
-                //set(type, milliseconds, intent)
+                //set(type, milliseconds, pending intent)
                 alarmManager.set(AlarmManager.RTC_WAKEUP, alarmStartTime, alarmIntent);
 
                 Toast.makeText(this, "Done!!!", Toast.LENGTH_SHORT).show();
