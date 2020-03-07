@@ -91,7 +91,8 @@ public class AddTaskAdapter extends RecyclerView.Adapter<AddTaskAdapter.MyViewHo
 //                Log.e("inside change listener","Change Listener" );
 //                Toast.makeText(context, String.valueOf(arrayList.get(position).getTaskId()), Toast.LENGTH_SHORT).show();
                 arrayList.get(position).setSelected(isChecked);
-                notifyDataSetChanged();
+//                notifyDataSetChanged();
+                notifyItemChanged(position);
             }
         });
 

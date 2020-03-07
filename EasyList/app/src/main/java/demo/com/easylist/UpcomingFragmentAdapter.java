@@ -67,6 +67,7 @@ public class UpcomingFragmentAdapter extends RecyclerView.Adapter<UpcomingFragme
 
                     Intent intent = new Intent(context, AddTaskUpcoming.class);
                     intent.putExtra("type", arrayList.get(getAdapterPosition()));
+                    intent.putExtra("time", "Upcoming");
                     context.startActivity(intent);
 
                 }

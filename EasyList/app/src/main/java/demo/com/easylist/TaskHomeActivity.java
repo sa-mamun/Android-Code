@@ -8,10 +8,13 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.graphics.pdf.PdfDocument;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
@@ -21,10 +24,10 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class TaskHomeActivity extends AppCompatActivity {
 
     TabLayout tabLayout;
-    CircleImageView civ_taskHomeProfile;
     ViewPager viewPager;
     PagerAdapter pagerAdapter;
     FloatingActionButton fab_add;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,10 @@ public class TaskHomeActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);
         fab_add = findViewById(R.id.fab_add);
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-1010032879599348/3225191658");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
         pagerAdapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount(), this);
         pagerAdapter.notifyDataSetChanged();
@@ -71,7 +78,16 @@ public class TaskHomeActivity extends AppCompatActivity {
 
     }
 
-    public void Back(View view) {
-        finish();
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+
+        if (mInterstitialAd.isLoaded())
+        {
+
+            mInterstitialAd.show();
+        }
+
     }
 }

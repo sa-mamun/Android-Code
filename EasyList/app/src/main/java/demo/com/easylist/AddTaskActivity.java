@@ -252,7 +252,7 @@ public class AddTaskActivity extends AppCompatActivity implements AddTaskAdapter
         AlertDialog myQuittingDialogBox = new AlertDialog.Builder(this)
                 // set message, title, and icon
                 .setTitle("Delete")
-                .setMessage("Do you want to Delete")
+                .setMessage("Do you want to Delete ?")
 //                .setIcon(R.drawable.delete_image_icon)
 
                 .setPositiveButton("Delete", new DialogInterface.OnClickListener() {

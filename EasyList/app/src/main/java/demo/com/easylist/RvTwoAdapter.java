@@ -96,12 +96,12 @@ public class RvTwoAdapter extends RecyclerView.Adapter<RvTwoAdapter.MyViewHolder
                     notifyDataSetChanged();
                     textView.setText(size + " Tasks");
 
-                    if (status)
-                    {
-                        Toast.makeText(v.getContext(), "Done", Toast.LENGTH_SHORT).show();
-                    }else{
-                        Toast.makeText(v.getContext(), "Failed", Toast.LENGTH_SHORT).show();
-                    }
+//                    if (status)
+//                    {
+//                        Toast.makeText(v.getContext(), "Done", Toast.LENGTH_SHORT).show();
+//                    }else{
+//                        Toast.makeText(v.getContext(), "Failed", Toast.LENGTH_SHORT).show();
+//                    }
 
                 }
             });
